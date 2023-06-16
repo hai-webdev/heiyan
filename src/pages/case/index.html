@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 引入公共页头 -->
+  <%= require("html-loader!../common/header/index.html") %>
+    <section class="text-container">
+      <div class="text-box max-center w1200">
+        <div class="text">
+          黑岩网络作为国内专业的影游美术、CG宣传片供应商，聚集了大批资深数字艺术家、建模专家、概念设计师、导演、制片等，组成资深的游戏&影视&动画美术制作团队，
+          核心成员均从业8~10年。我们帮助游戏和电影公司进行项目风格订制、建立前期设计开发的标准，实现无限的数字美术制作，为合作伙伴提供真正有价值、有创新性的设
+          计结果。主要包括：全CG游戏宣传片、广告片、游戏及电影项目的美术风格订制、2D原画设定、角色&场景概念设计、3D模型、UI&图标设计、动作特效、影视海报、美
+          宣、分镜、VR美术等。
+        </div>
+      </div>
+      <img src="/public/images/bg-case-text.png" class="bg-img">
+    </section>
+    <section class="project-container">
+      <div class="title-module-box max-center w1200">
+        <div class="title-module">
+          <div class="title">项目案例</div>
+          <div class="en-title">PROJECT CASE</div>
+        </div>
+        <div class="subtitle">游戏宣传片&动画番剧&广告片</div>
+        <a href="case_project.html" class="more">查看更多 <i class="icon-arrow-right-bold iconfont"></i></a>
+      </div>
+      <div class="project-box max-center w1200">
+        <div class="left-layout">
+          <div class="project-swiper swiper-container">
+            <ul class="project-list swiper-wrapper">
+              <li class="project-item swiper-slide">
+                <div class="img" data-img="/public/images/project-01.png" data-video="/public/video/cultivate.mp4">
+                  <img src="/public/images/btn-video.png" class="video-btn">
+                  <img src="/public/images/project-01.png">
+                </div>
+              </li>
+              <li class="project-item swiper-slide">
+                <div class="img" data-img="/public/images/project-01.png" data-video="/public/video/cultivate.mp4">
+                  <img src="/public/images/btn-video.png" class="video-btn">
+                  <img src="/public/images/project-01.png">
+                </div>
+              </li>
+              <li class="project-item swiper-slide">
+                <div class="img" data-img="/public/images/project-01.png" data-video="/public/video/cultivate.mp4">
+                  <img src="/public/images/btn-video.png" class="video-btn">
+                  <img src="/public/images/project-01.png">
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="swiper-pagination swiper-project-pagination"></div>
+        </div>
+        <div class="right-layout">
+          <ul class="project-list">
+            <li class="project-item">
+              <div class="img" data-img="/public/images/project-02.png" data-video="/public/video/cultivate.mp4">
+                <img src="/public/images/btn-video.png" class="video-btn">
+                <img src="/public/images/project-02.png">
+              </div>
+              <div class="text">
+                <div class="title">边际启示录官方先导片</div>
+                <div class="time">02:29</div>
+              </div>
+            </li>
+            <li class="project-item">
+              <div class="img" data-img="/public/images/project-02.png" data-video="/public/video/cultivate.mp4">
+                <img src="/public/images/btn-video.png" class="video-btn">
+                <img src="/public/images/project-02.png">
+              </div>
+              <div class="text">
+                <div class="title">边际启示录官方先导片</div>
+                <div class="time">02:29</div>
+              </div>
+            </li>
+            <li class="project-item">
+              <div class="img" data-img="/public/images/project-02.png" data-video="/public/video/cultivate.mp4">
+                <img src="/public/images/btn-video.png" class="video-btn">
+                <img src="/public/images/project-02.png">
+              </div>
+              <div class="text">
+                <div class="title">边际启示录官方先导片</div>
+                <div class="time">02:29</div>
+              </div>
+            </li>
+            <li class="project-item">
+              <div class="img" data-img="/public/images/project-02.png" data-video="/public/video/cultivate.mp4">
+                <img src="/public/images/btn-video.png" class="video-btn">
+                <img src="/public/images/project-02.png">
+              </div>
+              <div class="text">
+                <div class="title">边际启示录官方先导片</div>
+                <div class="time">02:29</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="work-container" id="work-app">
+      <div class="title-module-box max-center w1200">
+        <div class="title-module">
+          <div class="title">作品展示</div>
+          <div class="en-title">WORKS SHOW</div>
+        </div>
+        <a href="case_work.html" class="more">查看更多 <i class="icon-arrow-right-bold iconfont"></i></a>
+      </div>
+      <ul class="work-tab-list max-center w1200">
+        <li class="work-tab-item" @mouseenter="changeWork(index)" v-for="(cate, index) in workList" :key="cate.id"
+          :class="{on: index === workCateIndex}">{{cate.title}}</li>
+      </ul>
+      <div class="work-swiper swiper-container max-center w1200">
+        <ul class="work-list swiper-wrapper">
+          <li class="work-item swiper-slide" @click="showPopup(i)" v-for="(pic, i) in works.pics" :key="pic + '-' + i">
+            <a class="img">
+              <img :src="pic">
+            </a>
+          </li>
+        </ul>
+        <div class="swiper-work-button-prev swiper-button-prev common-style"></div>
+        <div class="swiper-work-button-next swiper-button-next common-style"></div>
+      </div>
+      <section class="popup-container" v-show="popupShow">
+        <div class="swiper-container popup-swiper">
+          <ul class="swiper-wrapper popup-list">
+            <li class="popup-item swiper-slide" v-for="(pic, i) in works.pics" :key="pic + '-popup-' + i">
+              <img :src="pic">
+            </li>
+          </ul>
+          <div class="swiper-button-next swiper-popup-button-next common-style"></div>
+          <div class="swiper-button-prev swiper-popup-button-prev common-style"></div>
+        </div>
+        <div class="mask" @click="hidePopup"></div>
+      </section>
+    </section>
+    <section class="project-show-container">
+      <div class="title-module">
+        <div class="title">参与项目展示</div>
+        <div class="en-title">PROJECTS SHOW</div>
+      </div>
+      <ul class="projects-show-list max-center w1200">
+        <li class="projects-show-item">
+          <a href="">
+            <img src="/public/images/project-show-01.png">
+          </a>
+        </li>
+        <li class="projects-show-item">
+          <a href="">
+            <img src="/public/images/project-show-01.png">
+          </a>
+        </li>
+        <li class="projects-show-item">
+          <a href="">
+            <img src="/public/images/project-show-01.png">
+          </a>
+        </li>
+        <li class="projects-show-item">
+          <a href="">
+            <img src="/public/images/project-show-01.png">
+          </a>
+        </li>
+        <li class="projects-show-item">
+          <a href="">
+            <img src="/public/images/project-show-01.png">
+          </a>
+        </li>
+        <li class="projects-show-item">
+          <a href="">
+            <img src="/public/images/project-show-01.png">
+          </a>
+        </li>
+        <li class="projects-show-item">
+          <a href="">
+            <img src="/public/images/project-show-01.png">
+          </a>
+        </li>
+        <li class="projects-show-item">
+          <a href="">
+            <img src="/public/images/project-show-01.png">
+          </a>
+        </li>
+        <li class="projects-show-item">
+          <a href="">
+            <img src="/public/images/project-show-01.png">
+          </a>
+        </li>
+        <li class="projects-show-item">
+          <a href="">
+            <img src="/public/images/project-show-01.png">
+          </a>
+        </li>
+        <li class="projects-show-item">
+          <a href="">
+            <img src="/public/images/project-show-01.png">
+          </a>
+        </li>
+        <li class="projects-show-item">
+          <a href="">
+            <img src="/public/images/project-show-01.png">
+          </a>
+        </li>
+        <li class="projects-show-item">
+          <a href="">
+            <img src="/public/images/project-show-01.png">
+          </a>
+        </li>
+        <li class="projects-show-item">
+          <a href="">
+            <img src="/public/images/project-show-01.png">
+          </a>
+        </li>
+        <li class="projects-show-item">
+          <a href="">
+            <img src="/public/images/project-show-01.png">
+          </a>
+        </li>
+        <li class="projects-show-item">
+          <a href="">
+            <img src="/public/images/project-show-01.png">
+          </a>
+        </li>
+        <li class="projects-show-item">
+          <a href="">
+            <img src="/public/images/project-show-01.png">
+          </a>
+        </li>
+        <li class="projects-show-item">
+          <a href="">
+            <img src="/public/images/project-show-01.png">
+          </a>
+        </li>
+        <li class="projects-show-item">
+          <a href="">
+            <img src="/public/images/project-show-01.png">
+          </a>
+        </li>
+        <li class="projects-show-item">
+          <a href="">
+            <img src="/public/images/project-show-01.png">
+          </a>
+        </li>
+        <li class="projects-show-item">
+          <a href="">
+            <img src="/public/images/project-show-01.png">
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="video-popup-container">
+      <div class="video-box">
+        <video src="" id="popup-video" controls poster></video>
+      </div>
+      <div class="mask" @click="hidePopup"></div>
+    </section>
+    <!-- 引入公共页尾 -->
+    <%= require("html-loader!../common/footer/index.html") %>
+      <script src="/public/js/vue.min.js"></script>
+      <script>
+        window.workList = [
+          {
+            id: 0,
+            title: "科幻",
+            pics: [
+              "/public/images/work-01.png",
+              "/public/images/work-01.png",
+              "/public/images/work-01.png",
+              "/public/images/work-01.png",
+              "/public/images/work-01.png",
+              "/public/images/work-01.png",
+              "/public/images/work-01.png",
+              "/public/images/work-01.png",
+              "/public/images/work-01.png",
+              "/public/images/work-01.png",
+              "/public/images/work-01.png",
+              "/public/images/work-01.png",
+              "/public/images/work-01.png",
+              "/public/images/work-01.png",
+              "/public/images/work-01.png",
+              "/public/images/work-01.png",
+            ]
+          },
+          {
+            id: 1,
+            title: "二次元&美宣海报",
+            pics: [
+              "/public/images/work-02.png",
+              "/public/images/work-02.png",
+              "/public/images/work-02.png",
+              "/public/images/work-02.png",
+              "/public/images/work-02.png",
+              "/public/images/work-02.png",
+              "/public/images/work-02.png",
+              "/public/images/work-02.png",
+              "/public/images/work-02.png",
+              "/public/images/work-02.png",
+              "/public/images/work-02.png",
+              "/public/images/work-02.png",
+              "/public/images/work-02.png",
+              "/public/images/work-02.png",
+              "/public/images/work-02.png",
+              "/public/images/work-02.png",
+            ]
+          },
+          {
+            id: 2,
+            title: "2D角色",
+            pics: [
+              "/public/images/work-03.png",
+              "/public/images/work-03.png",
+              "/public/images/work-03.png",
+              "/public/images/work-03.png",
+              "/public/images/work-03.png",
+              "/public/images/work-03.png",
+              "/public/images/work-03.png",
+              "/public/images/work-03.png",
+              "/public/images/work-03.png",
+              "/public/images/work-03.png",
+              "/public/images/work-03.png",
+              "/public/images/work-03.png",
+              "/public/images/work-03.png",
+              "/public/images/work-03.png",
+              "/public/images/work-03.png",
+              "/public/images/work-03.png",
+            ]
+          },
+          {
+            id: 3,
+            title: "2D场景",
+            pics: [
+              "/public/images/work-04.png",
+              "/public/images/work-04.png",
+              "/public/images/work-04.png",
+              "/public/images/work-04.png",
+              "/public/images/work-04.png",
+              "/public/images/work-04.png",
+              "/public/images/work-04.png",
+              "/public/images/work-04.png",
+              "/public/images/work-04.png",
+              "/public/images/work-04.png",
+              "/public/images/work-04.png",
+              "/public/images/work-04.png",
+              "/public/images/work-04.png",
+              "/public/images/work-04.png",
+              "/public/images/work-04.png",
+              "/public/images/work-04.png",
+            ]
+          },
+          {
+            id: 4,
+            title: "3D角色",
+            pics: [
+              "/public/images/work-05.png",
+              "/public/images/work-05.png",
+              "/public/images/work-05.png",
+              "/public/images/work-05.png",
+              "/public/images/work-05.png",
+              "/public/images/work-05.png",
+              "/public/images/work-05.png",
+              "/public/images/work-05.png",
+              "/public/images/work-05.png",
+              "/public/images/work-05.png",
+              "/public/images/work-05.png",
+              "/public/images/work-05.png",
+              "/public/images/work-05.png",
+              "/public/images/work-05.png",
+              "/public/images/work-05.png",
+              "/public/images/work-05.png",
+            ]
+          },
+          {
+            id: 5,
+            title: "3D场景",
+            pics: [
+              "/public/images/work-06.png",
+              "/public/images/work-06.png",
+              "/public/images/work-06.png",
+              "/public/images/work-06.png",
+              "/public/images/work-06.png",
+              "/public/images/work-06.png",
+              "/public/images/work-06.png",
+              "/public/images/work-06.png",
+              "/public/images/work-06.png",
+              "/public/images/work-06.png",
+              "/public/images/work-06.png",
+              "/public/images/work-06.png",
+              "/public/images/work-06.png",
+              "/public/images/work-06.png",
+              "/public/images/work-06.png",
+              "/public/images/work-06.png",
+            ]
+          },
+          {
+            id: 6,
+            title: "卡牌",
+            pics: [
+              "/public/images/work-07.png",
+              "/public/images/work-07.png",
+              "/public/images/work-07.png",
+              "/public/images/work-07.png",
+              "/public/images/work-07.png",
+              "/public/images/work-07.png",
+              "/public/images/work-07.png",
+              "/public/images/work-07.png",
+              "/public/images/work-07.png",
+              "/public/images/work-07.png",
+              "/public/images/work-07.png",
+              "/public/images/work-07.png",
+              "/public/images/work-07.png",
+              "/public/images/work-07.png",
+              "/public/images/work-07.png",
+              "/public/images/work-07.png",
+            ]
+          },
+
+        ]
+      </script>
+</body>
+
+</html>

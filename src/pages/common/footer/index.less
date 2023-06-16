@@ -1,0 +1,94 @@
+@import "~@/assets/global.less";
+.footer-container {
+  background-color: #181818;
+  .foot-box {
+    padding: 50px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #fff;
+    .flex(space-between,flex-start);
+    .title {
+      font-size: 16px;
+      color: #fff;
+      margin-bottom: 25px;
+    }
+    .logo-box {
+      width: 152px;
+      padding-right: 60px;
+    }
+    .contact-box {
+      flex:1;
+      .cont {
+        color: #aaa;
+        font-size: 16px;
+        line-height: 1.7;
+      }
+    }
+    .about-box {
+      width: 180px;
+      margin-right: 70px;
+      .nav-list {
+        .flex();
+        .nav-item {
+          display: block;
+          color: #aaa;
+          width: 50%;
+          font-size: 16px;
+          line-height: 1.7;
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+    .follow-box {
+      .follow-list {
+        .flex();
+        .follow-item {
+          margin-right: 20px;
+          &:last-child{
+            margin-right: 0;
+          }
+          img {
+            width: 95px;
+            height: 95px;
+            margin: 0 auto;
+          }
+          p {
+            font-size: 11px;
+            color: #aaa;
+            padding: 5px 0;
+          }
+        }
+      }
+    }
+  }
+  .copyright {
+    background-color: #222;
+    .copyright-box {
+      max-width: 1200px;
+      box-sizing: border-box;
+      margin: 0 auto;
+      .flex(flex-start,center);
+      font-size: 12px;
+      padding: 15px 0 15px 212px;
+      color: #aaa;
+      a {
+        color: inherit;
+      }
+      p {
+        .flex(center,center);
+      }
+      .gongan {
+        margin-left: 10px;
+        img {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+@import "./1360.less" screen and (max-width: 1360px);
+@import "./1280.less" screen and (max-width: 1280px);
+@import "./768.less" screen and (max-width: 768px);

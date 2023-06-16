@@ -1,0 +1,67 @@
+@import "~@/assets/global.less";
+.header-container.pc {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    transition: .6s;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  .head-box {
+    height: 52px;
+    .flex(space-between,center);
+    .center-layout {
+      .nav-list {
+        transform: translateX(40px);
+        .flex();
+        .nav-item{
+            color:#fff;
+            padding: 0 20px;
+            line-height: 52px;
+            position: relative;
+            &::after{
+                content:"";
+                position: absolute;
+                left: 50%;
+                bottom: -1px;
+                width: 64px;
+                transform: translateX(-50%) scaleX(0);
+                opacity: 0;
+                height: 3px;
+                background-color: #2f89fb;
+                transition: .6s;
+            }
+            &:hover,
+            &.on{
+                &::after{
+                    opacity: 1;
+                    transform:translateX(-50%) scaleX(1);
+                }
+                a{
+                   color:#2f89fb;
+                }
+            }
+            a{
+                color:#fff;
+            }
+    
+        }
+      }
+    }
+    .right-layout{
+        .icon{
+            color:#fff;
+            font-weight: bold;
+            font-size: 32px;
+        }
+    }
+  }
+  &.inner{
+    background-color: #181818;
+  }
+}
+.header-container.m{
+  display: none;
+}
+@import "./1440.less" screen and (max-width:1440px);
+@import "./1080.less" screen and (max-width:1080px);

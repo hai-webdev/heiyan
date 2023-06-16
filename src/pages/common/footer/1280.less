@@ -1,0 +1,80 @@
+.footer-container {
+  .foot-box {
+    .title {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+    .logo-box {
+      width: 40%;
+      padding-right: 30px;
+      box-sizing: border-box;
+      order: 1;
+    }
+    .contact-box {
+      width: 40%;
+      padding-right: 30px;
+      box-sizing: border-box;
+      order: 4;
+    }
+    .about-box {
+      width: 40%;
+      margin-right: 0;
+      order: 3;
+      .nav-list {
+        .flex();
+        .nav-item {
+          display: block;
+          color: #aaa;
+          width: 50%;
+          font-size: 14px;
+          line-height: 1.7;
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+    .follow-box {
+      width: 40%;
+      order: 2;
+      margin-bottom: 30px;
+      .follow-list {
+        .flex();
+        .follow-item {
+          margin-right: 10px;
+          width: calc(50% - 10px);
+          margin-bottom: 20px;
+          img {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+          }
+          p {
+            font-size: 10px;
+            text-align: center;
+            padding: 5px 0;
+          }
+        }
+      }
+    }
+  }
+  .copyright {
+    background-color: #222;
+    .flex(center,center);
+    font-size: 12px;
+    padding: 15px 0;
+    color: #aaa;
+    a {
+      color: inherit;
+    }
+    p {
+      .flex(center,center);
+    }
+    .gongan {
+      margin-left: 10px;
+      img {
+        margin-right: 5px;
+      }
+    }
+  }
+}

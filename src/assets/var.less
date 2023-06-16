@@ -1,0 +1,33 @@
+.flex(@justify-content:flex-start,@align-items:flex-start) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: @justify-content;
+  align-items: @align-items;
+}
+
+@mainColor: #5a5ea7;
+@subColor: #2b2273;
+.bgImg() {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.max-center {
+  width: 90%;
+  max-width: 1300px;
+  margin: 0 auto;
+  &.w1200 {
+    max-width: 1200px;
+  }
+}
+.clamp(@clamp:3) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: @clamp;
+  -webkit-box-orient: vertical;
+}

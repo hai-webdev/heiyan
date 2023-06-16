@@ -1,0 +1,97 @@
+body {
+  /*padding-top: 88px;*/
+}
+
+.main-container {
+  padding: 35px;
+  padding-bottom: 35px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  .title {
+    font-size: 22px;
+  }
+  .tab-list {
+    .flex();
+    .tab-item {
+      line-height: 48px;
+      height: 48px;
+      margin-right: 35px;
+      cursor: pointer;
+      position: relative;
+      &::after {
+        height: 3px;
+      }
+    }
+  }
+  .cont-list {
+    .cont-item {
+      .job-list {
+        .job-item {
+          .title-box {
+            height: 66px;
+            .left-layout {
+              font-size: 18px;
+            }
+            .apply {
+              width: 100px;
+              height: 36px;
+              font-size: 15px;
+            }
+          }
+          .cont {
+            padding-bottom: 30px;
+            .box {
+              margin-bottom: 20px;
+            }
+            h2 {
+              font-size: 18px;
+              font-weight: bold;
+              margin-bottom: 15px;
+            }
+            p {
+              line-height: 1.5;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.text-container {
+  padding: 30px 0;
+  .text {
+    font-size: 18px;
+  }
+}
+.treatment-container {
+  background-color: #fff;
+  border-radius: 8px;
+  position: relative;
+  padding: 40px;
+  .title-box {
+    margin-bottom: 15px;
+    .title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .desc {
+      font-size: 16px;
+    }
+  }
+  .treatment-list {
+    .treatment-item {
+      .text {
+        padding: 15px;
+        .title {
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+        .cont {
+          line-height: 1.5;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

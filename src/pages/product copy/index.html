@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 引入公共页头 -->
+  <%= require("html-loader!../common/header/index.html") %>
+  <section class="product-container" style="background-image: url(/public/images/bg-product.png);">
+    <div class="title-module">
+      <div class="title white">旗下产品</div>
+      <div class="en-title white">PROJECT CASE</div>
+    </div>
+    <div class="product-swiper-box max-center w1200">
+      <div class="product-swiper swiper-container">
+        <ul class="product-list swiper-wrapper">
+          <li class="product-item swiper-slide">
+            <div class="img">
+              <img src="/public/images/pro-01.webp" alt="">
+            </div>
+            <div class="title-box">
+              <div class="left-layout">
+                <div class="avatar">
+                  <img src="/public/images/pro-avatar-01.png">
+                </div>
+                <div class="text">
+                  <div class="title">《星骸骑士》同名手游</div>
+                  <p>动漫改变策略战争手游</p>
+                </div>
+              </div>
+              <div class="more">
+                <i class="iconfont icon-bofang"></i>
+              </div>
+            </div>
+            <div class="content">
+              《星骸骑士》手游，是由同名动漫改编的策略战争手游，由动漫出品/制片人 Nicotine操刀制作。游戏中保留了原动漫中的写实美术风格，还原刺激恢弘的场景，呈现了最原汁原味的世界观。玩家可以在开发的地图上建造属于自己的基地，不仅有功能多元的建筑，还有到处徘徊的深渊魔怪。作为骑士团的指挥官，你可以扩张、升级基地，指挥队伍战斗、收集黑晶，与其他玩家对战博弈。在这里，你能体验到丰富有趣的策略玩法，高自由度的操作，和原汁原味的星骸剧情。指挥官，我们在野原星等你！
+            </div>
+          </li>
+          <li class="product-item swiper-slide">
+            <div class="img">
+              <img src="/public/images/pro-02.webp" class="top" alt="">
+            </div>
+            <div class="title-box">
+              <div class="left-layout">
+                <div class="avatar">
+                  <img src="/public/images/pro-avatar-02.png">
+                </div>
+                <div class="text">
+                  <div class="title">《星骸骑士》动画片</div>
+                  <p>原创3D科幻动画</p>
+                </div>
+              </div>
+              <div class="more">
+                <i class="iconfont icon-bofang"></i>
+              </div>
+            </div>
+            <div class="content">
+              <p>《星骸骑士》是黑岩网络原创的3D科幻剧集动画，由黑岩网络与企鹅影视联合出品。被腾讯视频评为S+级动画、平台头部科幻作品。是黑岩自主开发的国内首个多故事线大型科幻题材系列IP“边际启示录”的核心作品。</p>
+              <p>《星骸骑士》单平台总播放量已突破5.3亿，弹幕数量超20万+，平均单集播放量超2100万，成为2020年上线的单集播放量最高国产原创3D动画，开播即登顶微博热搜娱乐榜TOP1，微视热搜榜TOP5，豆瓣一周华语榜口碑剧集榜TOP10，腾讯视频平台评分自研原创影视动画9.1</p>
+            </div>
+          </li>
+          <li class="product-item swiper-slide">
+            <div class="img">
+              <img src="/public/images/pro-03.webp" alt="">
+            </div>
+            <div class="title-box">
+              <div class="left-layout">
+                <div class="avatar">
+                  <img src="/public/images/pro-avatar-03.png">
+                </div>
+                <div class="text">
+                  <div class="title">《边际启示录》IP</div>
+                  <p>原创科幻网络小说</p>
+                </div>
+              </div>
+              <div class="more">
+                <i class="iconfont icon-bofang"></i>
+              </div>
+            </div>
+            <div class="content">
+              《边际启示录》是杭州黑岩网络科技有限公司创作，连载于边际启示录官方网站的科幻网络小说。 书名取自在银河系边际，深渊、教廷、新联邦、索恩帝国都在争夺的神秘能量“启示录”。故事讲述在末日废土中主人公查尔斯在TRZ-47行星上寻找创世神古墓钥匙的途中，卷入深渊、教廷、新联邦、索恩帝国各方势力的斗争的冒险之旅。
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+  </section>
+  <!-- 引入公共页尾 -->
+  <%= require("html-loader!../common/footer/index.html") %>
+</body>
+
+</html>

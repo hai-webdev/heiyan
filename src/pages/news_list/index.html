@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 引入公共页头 -->
+  <%= require("html-loader!../common/header/index.html") %>
+    <section class="banner-container">
+      <div class="text">
+        <div class="title">黑岩动态</div>
+        <div class="en-title">NEWS</div>
+      </div>
+      <img src="/public/images/bg-news.png" alt="黑岩动态" class="bg-img">
+    </section>
+    <main class="main-container max-center w1200">
+      <ul class="news-list">
+        <li class="news-item">
+          <a href="news_view.html" class="news-box">
+            <div class="date">
+              <div class="m-d">01-11</div>
+              <div class="y">2022</div>
+            </div>
+            <div class="img">
+              <img src="/public/images/news-01.png" alt="">
+            </div>
+            <div class="text">
+              <div class="title">《星骸骑士》第一季4亿收官!</div>
+              <div class="cont">《星骸骑士》第一季完结篇《星火重燃》已经播出有一段时间啦我们看到大家对于彩蛋有着不少疑问：主角 他们去了哪？</div>
+            </div>
+          </a>
+        </li>
+        <li class="news-item">
+          <a href="news_view.html" class="news-box">
+            <div class="date">
+              <div class="m-d">01-11</div>
+              <div class="y">2022</div>
+            </div>
+            <div class="img">
+              <img src="/public/images/news-01.png" alt="">
+            </div>
+            <div class="text">
+              <div class="title">《星骸骑士》第一季4亿收官!</div>
+              <div class="cont">《星骸骑士》第一季完结篇《星火重燃》已经播出有一段时间啦我们看到大家对于彩蛋有着不少疑问：主角 他们去了哪？</div>
+            </div>
+          </a>
+        </li>
+        <li class="news-item">
+          <a href="news_view.html" class="news-box">
+            <div class="date">
+              <div class="m-d">01-11</div>
+              <div class="y">2022</div>
+            </div>
+            <div class="img">
+              <img src="/public/images/news-01.png" alt="">
+            </div>
+            <div class="text">
+              <div class="title">《星骸骑士》第一季4亿收官!</div>
+              <div class="cont">《星骸骑士》第一季完结篇《星火重燃》已经播出有一段时间啦我们看到大家对于彩蛋有着不少疑问：主角 他们去了哪？</div>
+            </div>
+          </a>
+        </li>
+        <li class="news-item">
+          <a href="news_view.html" class="news-box">
+            <div class="date">
+              <div class="m-d">01-11</div>
+              <div class="y">2022</div>
+            </div>
+            <div class="img">
+              <img src="/public/images/news-01.png" alt="">
+            </div>
+            <div class="text">
+              <div class="title">《星骸骑士》第一季4亿收官!</div>
+              <div class="cont">《星骸骑士》第一季完结篇《星火重燃》已经播出有一段时间啦我们看到大家对于彩蛋有着不少疑问：主角 他们去了哪？</div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </main>
+    <section class="pagination">
+      <div class="num-text">共10条</div>
+      <a href="" class="page-num prev" disabled>上一页</a>
+      <a href="" class="page-num page-num-current" disabled>1</a>
+      <a href="" class="page-num">2</a>
+      <a href="" class="page-num">3</a>
+      <span class="page-num">···</span>
+      <a href="" class="page-num">10</a>
+      <a href="" class="page-num next" disabled>下一页</a>
+    </section>
+    <!-- 引入公共页尾 -->
+    <%= require("html-loader!../common/footer/index.html") %>
+</body>
+
+</html>

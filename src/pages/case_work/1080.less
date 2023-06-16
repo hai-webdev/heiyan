@@ -1,0 +1,41 @@
+.work-container {
+    .work-tab-list {
+      .flex();
+      margin-bottom: 10px;
+      .work-tab-item {
+        flex: auto;
+        line-height: 44px;
+        height: 44px;
+        font-size: 14px;
+        color: #2a2c2e;
+        cursor: pointer;
+        position: relative;
+        &::after {
+          height: 20px;
+        }
+        &.on {
+          &::before {
+            height: 3px;
+          }
+        }
+      }
+    }
+    .work-list {
+      .work-item {
+        .img {
+          overflow: hidden;
+          display: block;
+          img {
+            transition: 0.6s;
+          }
+        }
+        &:hover {
+          .img {
+            img {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+  }
