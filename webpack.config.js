@@ -40,7 +40,7 @@ module.exports = {
   output: {
     filename: "src/js/[name].js", // js 输出到 dist/js/xxx
     publicPath: "", // 公用的公共路径 /
-    path: path.resolve(__dirname, "dist"), // 输出目录为 dist
+    path: path.resolve(__dirname, "docs"), // 输出目录为 dist
   },
   resolve: {
     alias: {
